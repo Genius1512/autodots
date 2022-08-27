@@ -32,6 +32,7 @@ fi
 
 ./.dc/install_pkgs.sh
 ./.dc/copy_cfgs.sh
+./.dc/install_fonts.sh
 
 if test -f "./post_install.sh"; then
     chmod +x ./post_install.sh

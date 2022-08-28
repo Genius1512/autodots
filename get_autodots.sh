@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo pacman -S wget --noconfirm --needed
+
 wget https://raw.githubusercontent.com/Genius1512/autodots/main/install.sh
 chmod +x install.sh
 

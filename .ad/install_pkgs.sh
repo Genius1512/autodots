@@ -8,12 +8,18 @@ install_files=($(ls pkgs/))
 
 for install in "${install_files[@]}"
 do
-    if [[ $install == *_PACMAN ]]
+    if [[ $install == PACMAN ]]
     then
-        sudo pacman -S $(cat "pkgs/$install") --noconfirm --needed
-    elif [[ $install == *_YAY ]]
+        for pkg in $(cat pkgs/$install)
+        do
+            sudo pacman -S $pkg --noconfirm --needed
+        done
+    elif [[ $install == YAY ]]
     then
-        yay -S $(cat "pkgs/$install") --noconfirm
+        for pkg in $(cat pkgs/$install)
+        do
+            yay -S $pkg --noconfirm
+        done
     elif [[ $install == *_EXEC* ]]
     then
         chmod +x "pkgs/$install"

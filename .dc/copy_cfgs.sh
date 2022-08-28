@@ -1,15 +1,15 @@
 #!/bin/bash
 
 config_files=($(ls cfgs/))
+rcs=("bashrc", "xinirc", "bash_profile", "")
+
+mkdir $HOME/.config
 
 for config in "${config_files[@]}"
 do
-    if [[ $config == "bashrc" ]]
+    if [[ " ${rcs[*]} " =~ " ${config} " ]];
     then
-        cp cfgs/bashrc $HOME/.bashrc
-    elif [[ config == "xinitrc" ]]
-    then
-        cp "cfgs/xinitrc" $HOME/.xinitrc
+        cp "cfgs/$config" "$HOME/.$config"
     else
         cp -r "cfgs/$config/" $HOME/.config/$config
     fi

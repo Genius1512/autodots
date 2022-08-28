@@ -8,7 +8,7 @@ fi
 config_files=($(ls cfgs/))
 rcs=("bashrc", "xinirc", "bash_profile")
 
-mkdir $HOME/.config
+mkdir -p $HOME/.config
 
 for config in "${config_files[@]}"
 do

@@ -30,9 +30,9 @@ if test -f "./pre_install.sh"; then
     ./pre_install.sh
 fi
 
-./.dc/install_pkgs.sh
-./.dc/copy_cfgs.sh
-./.dc/install_fonts.sh
+./.ad/install_pkgs.sh
+./.ad/copy_cfgs.sh
+./.ad/install_fonts.sh
 
 if test -f "./post_install.sh"; then
     chmod +x ./post_install.sh

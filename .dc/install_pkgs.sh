@@ -16,6 +16,7 @@ do
         yay -S $(cat "pkgs/$install") --noconfirm
     elif [[ $install == *_EXEC* ]]
     then
+        chmod +x "pkgs/$install"
         "pkgs/$install"
     elif [[ $install == *_AUR ]]
     then

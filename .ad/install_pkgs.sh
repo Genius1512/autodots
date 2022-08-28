@@ -18,7 +18,7 @@ do
     then
         for pkg in $(cat pkgs/$install)
         do
-            yay -S $pkg --noconfirm
+            yay -S $pkg --noconfirm --needed
         done
     elif [[ $install == *_EXEC* ]]
     then

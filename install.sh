@@ -6,11 +6,14 @@
 sudo pacman -S git base-devel wget --noconfirm --needed
 
 # Install yay
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si --noconfirm
-cd ..
-rm -rf yay
+if ! [ -x "$(command -v yay)" ];
+then
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf yay
+fi
 
 ##############
 # Make files #

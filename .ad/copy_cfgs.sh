@@ -12,7 +12,7 @@ mkdir $HOME/.config
 
 for config in "${config_files[@]}"
 do
-    if [[ " ${rcs[*]} " =~ " ${config} " ]];
+    if printf '%s\n' "${rcs[@]}" | grep -q -P $config;
     then
         cp "cfgs/$config" "$HOME/.$config"
     else

@@ -10,7 +10,7 @@ for install in "${install_files[@]}"
 do
     if [[ $install == *_PACMAN ]]
     then
-        sudo pacman -S $(cat "pkgs/$install") --noconfirm
+        sudo pacman -S $(cat "pkgs/$install") --noconfirm --needed
     elif [[ $install == *_YAY ]]
     then
         yay -S $(cat "pkgs/$install") --noconfirm

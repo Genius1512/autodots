@@ -3,7 +3,7 @@
 #########################
 # Install dependencies ##
 #########################
-sudo pacman -S git base-devel wget --noconfirm
+sudo pacman -S git base-devel wget --noconfirm --needed
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git

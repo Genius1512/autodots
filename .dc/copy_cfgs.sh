@@ -14,6 +14,7 @@ for config in "${config_files[@]}"
 do
     if [[ " ${rcs[*]} " =~ " ${config} " ]];
     then
+        rm "$HOME/.$config"
         cp "cfgs/$config" "$HOME/.$config"
     else
         cp -r "cfgs/$config/" $HOME/.config/$config

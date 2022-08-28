@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if ! [[ -d "cfgs/" ]];
+then
+    exit
+fi
+
 config_files=($(ls cfgs/))
 rcs=("bashrc", "xinirc", "bash_profile", "")
 

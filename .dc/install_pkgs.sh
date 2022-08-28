@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! [[ -d "pkgs/" ]];
+then
+    exit
+fi
 
 install_files=($(ls pkgs/))
 
@@ -10,6 +14,9 @@ do
     elif [[ $install == *_YAY ]]
     then
         yay -S $(cat "pkgs/$install") --noconfirm
+    elif [[ $install == *_EXEC* ]]
+    then
+        "pkgs/$install"
     elif [[ $install == *_AUR ]]
     then
         git clone $(cat "pkgs/$install") install

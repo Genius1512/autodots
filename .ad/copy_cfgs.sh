@@ -6,7 +6,7 @@ then
 fi
 
 config_files=($(ls cfgs/))
-rcs=("bashrc", "xinirc", "bash_profile")
+rcs=("bashrc", "xinitrc", "bash_profile")
 
 mkdir -p $HOME/.config
 

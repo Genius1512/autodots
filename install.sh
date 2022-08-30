@@ -38,6 +38,7 @@ fi
 ./.ad/install_pkgs.sh
 ./.ad/copy_cfgs.sh
 ./.ad/install_fonts.sh
+./.ad/copy_wallpapers.sh
 
 if test -f "./post_install.sh"; then
     chmod +x ./post_install.sh

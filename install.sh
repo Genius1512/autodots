@@ -23,7 +23,8 @@ then
     $ROOT/preinstall.sh
 fi
 
-"$SCRIPT_DIR/install_pkgs.sh" $ROOT
+$SCRIPT_DIR/pkgs_install.sh $ROOT
+$SCRIPT_DIR/fonts_install.sh $ROOT
 
 if [[ -f $ROOT/postinstall.sh ]]
 then

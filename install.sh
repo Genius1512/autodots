@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo pacman -Syu
 
 set -e
 

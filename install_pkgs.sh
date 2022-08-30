@@ -1,10 +1,12 @@
 #!/bin/bash
-if ! [[ -d "pkgs/" ]];
+ROOT=$1
+
+if ! [[ -d $ROOT/pkgs ]]
 then
     exit
 fi
 
-install_files=($(ls pkgs/))
+install_files=( $(ls $1/pkgs) )
 
 for install in "${install_files[@]}"
 do
@@ -22,11 +24,11 @@ do
         done
     elif [[ $install == *_EXEC* ]]
     then
-        chmod +x "pkgs/$install"
-        "pkgs/$install"
+        chmod +x pkgs/$install
+        pkgs/$install
     elif [[ $install == *_AUR ]]
     then
-        git clone $(cat "pkgs/$install") install
+        git clone $(cat pkgs/$install) install
         cd install
         makepkg -si --noconfirm
         cd ..
@@ -35,3 +37,5 @@ do
         echo "No installation method for 'pkgs/$install'"
     fi
 done
+    
+

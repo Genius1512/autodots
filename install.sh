@@ -25,6 +25,7 @@ fi
 
 $SCRIPT_DIR/pkgs_install.sh $ROOT
 $SCRIPT_DIR/fonts_install.sh $ROOT
+$SCRIPT_DIR/copy_cfgs.sh $ROOT
 
 if [[ -f $ROOT/postinstall.sh ]]
 then

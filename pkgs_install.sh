@@ -6,7 +6,7 @@ then
     exit
 fi
 
-install_files=( $(ls $1/pkgs) )
+install_files=( $(ls $ROOT/pkgs) )
 
 for install in "${install_files[@]}"
 do

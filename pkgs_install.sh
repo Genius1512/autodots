@@ -1,12 +1,12 @@
 #!/bin/bash
 ROOT=$1
 
-if ! [[ -d $ROOT/pkgs ]]
+if ! [[ -d $ROOT/pkgs/ ]]
 then
     exit
 fi
 
-install_files=( $(ls $ROOT/pkgs) )
+install_files=( $( ls $ROOT/pkgs/ ) )
 
 for install in "${install_files[@]}"
 do

@@ -13,7 +13,7 @@ mkdir -p $HOME/.config
 
 for config in "${config_files[@]}"
 do
-    if [[ -f $config ]]
+    if [[ -f cfgs/$config ]]
     then
         if printf '%s\n' "${rcs[@]}" | grep -q -P $config
         then

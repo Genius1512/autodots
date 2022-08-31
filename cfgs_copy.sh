@@ -7,7 +7,7 @@ then
 fi
 
 config_files=( $(ls $ROOT/cfgs) )
-rcs=( "bashrc", "xinitrc", "bash_profile" )
+rcs=( "bashrc", "xinitrc", "bash_profile", "bash_completion" )
 
 mkdir -p $HOME/.config
 

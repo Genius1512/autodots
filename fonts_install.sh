@@ -6,7 +6,7 @@ then
     exit
 fi
 
-sudo pacman -S font-config --noconfirm --needed
+sudo pacman -S fontconfig --noconfirm --needed
 
 mkdir $HOME/.fonts
 cp $ROOT/fonts/* $HOME/.fonts

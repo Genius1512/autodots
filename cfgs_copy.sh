@@ -18,6 +18,7 @@ do
         if printf '%s\n' "${rcs[@]}" | grep -q -P $config
         then
             cp cfgs/$config $HOME/.$config
+            chmod +x $HOME/.$config
         else
             echo "$config is not a valid rc"
         fi
